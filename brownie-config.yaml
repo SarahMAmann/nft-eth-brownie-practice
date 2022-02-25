@@ -1,0 +1,18 @@
+dependencies:
+  - OpenZepplin/openzepplin-contracts@3.4.0
+  - smartcontractkit/chainlink-brownie-contract@1.0.2
+compiler:
+  solc:
+    remappings: 
+    - '@openzepplin=OpenZepplin/openzepplin-contracts@3.4.0'
+    - '@chainlink=smartcontractkit/chainlink-brownie-contracts@1.0.2'
+wallets:
+  from_key: ${PRIVATE_KEY}
+  from_mnemonic: ${MNEMONIC}
+networks:
+  default: development
+  rinkeby:
+    vrf_coordinator: '0x271682DEB8C4E0901D1a1550aD2e64D568E69909'
+    link_token: '0x514910771af9ca656af840dff83e8264ecf986ca'
+    keyhash: '0x8af398995b04c28e9951adb9721ef74c74f93e6a478f39e7e0777be13527e7ef'
+    fee: 1000000
